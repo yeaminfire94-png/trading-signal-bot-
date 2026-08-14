@@ -18,7 +18,15 @@ ST_RISK_WARNING = """
 # এটি কীভাবে পাবেন, তা জানতে https://ai.google.dev/ দেখুন
 os.environ["GOOGLE_API_KEY"] = "YOUR_GEMINI_API_KEY_HERE"  # <--- আপনার API কী এখানে দিন
 if not os.environ["GOOGLE_API_KEY"] or os.environ["GOOGLE_API_KEY"] == "YOUR_GEMINI_API_KEY_HERE":
-    st.error("দয়া করে আপনার Gemini API কী সেট করুন। Google AI Studio থেকে এটি পেতে পারেন।")
+    st.erro#import streamlit as st
+import os
+import io
+import google.generativeai as genai
+from PIL import Image
+
+# API Key সেটআপ
+genai.configure(api_key="AIzaSy...আপনার_আসল_কী_এখানে_বসাবেন...")
+
     st.stop()
 
 # Gemini Vision মডেল সেটআপ
